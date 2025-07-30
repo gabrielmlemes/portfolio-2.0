@@ -1,5 +1,12 @@
+import { SparklesPreview } from "./components/Hero";
+
 const Page = () => {
-  return <div></div>;
+  return (
+    <div>
+      <SparklesPreview />
+    </div>
+  );
 };
 
 export default Page;
+
