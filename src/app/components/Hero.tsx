@@ -1,12 +1,18 @@
-import { SparklesCore } from "./ui/sparkles";
+"use client";
 
-export function SparklesPreview() {
+import { SparklesCore } from "./ui/sparkles";
+import { Mouse } from "./ui/Mouse";
+
+export function Hero() {
   return (
-    <div className="min-h-screen w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
+    <section className="min-h-screen w-full bg-black flex flex-col items-center justify-center rounded-md relative">
+      <h1
+        data-aos="zoom-in"
+        className="md:text-7xl text-3xl lg:text-9xl font-bold text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-t from-neutral-200 via-neutral-400 to-neutral-700"
+      >
         Gabriel Lemes
       </h1>
-      <div className="w-[40rem] h-40 relative">
+      <div data-aos="zoom-out" className="w-[40rem] h-40 relative">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
@@ -26,7 +32,8 @@ export function SparklesPreview() {
         {/* Radial Gradient to prevent sharp edges */}
         <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
       </div>
-    </div>
+      <Mouse />
+    </section>
   );
 }
 

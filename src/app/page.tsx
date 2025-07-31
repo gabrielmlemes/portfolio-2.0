@@ -1,9 +1,9 @@
-import { SparklesPreview } from "./components/Hero";
+import { Hero } from "./components/Hero";
 
 const Page = () => {
   return (
     <div>
-      <SparklesPreview />
+      <Hero />
     </div>
   );
 };
