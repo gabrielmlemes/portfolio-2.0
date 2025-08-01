@@ -3,7 +3,18 @@ import { Hero } from "./components/Hero";
 const Page = () => {
   return (
     <div>
-      <Hero />
+      <section id="inicio">
+        <Hero />
+      </section>
+      <section id="sobre">
+        <Hero />
+      </section>
+      <section id="projetos">
+        <Hero />
+      </section>
+      <section id="contato">
+        <Hero />
+      </section>
     </div>
   );
 };

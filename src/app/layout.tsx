@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AOSInit } from "./components/AOSInit";
+import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "Gabriel Lemes | Portfolio",
@@ -40,7 +41,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <AOSInit />
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
