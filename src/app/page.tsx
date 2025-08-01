@@ -10,12 +10,8 @@ const Page = () => {
       <section id="sobre">
         <About />
       </section>
-      <section id="projetos">
-        <Hero />
-      </section>
-      <section id="contato">
-        <Hero />
-      </section>
+      <section id="projetos">{/* <Hero /> */}</section>
+      <section id="contato">{/* <Hero /> */}</section>
     </div>
   );
 };
