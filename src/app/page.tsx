@@ -1,3 +1,4 @@
+import { About } from "./components/About";
 import { Hero } from "./components/Hero";
 
 const Page = () => {
@@ -7,7 +8,7 @@ const Page = () => {
         <Hero />
       </section>
       <section id="sobre">
-        <Hero />
+        <About />
       </section>
       <section id="projetos">
         <Hero />
@@ -20,4 +21,3 @@ const Page = () => {
 };
 
 export default Page;
-

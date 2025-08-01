@@ -33,7 +33,7 @@ export function Hero() {
           minSize={0.4}
           maxSize={1}
           particleDensity={1200}
-          className="w-60 sm:w-80 rounded-bl-[100px] overflow-hidden rounded-br-[100px] mx-auto md:w-full lg:w-full h-full"
+          className="xs:max-w-fit  rounded-bl-[100px] overflow-hidden rounded-br-[100px] md:w-full lg:w-full h-full"
           particleColor="#FFFFFF"
         />
 
