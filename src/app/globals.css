@@ -41,3 +41,42 @@ body {
   animation: scroll-down 1.8s infinite;
 }
 
+/* Swiper Customization */
+.projects-carousel .swiper-button-next,
+.projects-carousel .swiper-button-prev {
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+.projects-carousel .swiper-button-next::after,
+.projects-carousel .swiper-button-prev::after {
+  font-size: 2rem; /* 20px */
+  font-weight: 700;
+  color: #4f46e5; /* indigo-600 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .projects-carousel .swiper-button-next::after,
+  .projects-carousel .swiper-button-prev::after {
+    color: white; /* indigo-400 */
+  }
+}
+
+.projects-carousel .swiper-slide {
+  cursor: grab;
+}
+
+.projects-carousel .swiper-slide:active {
+  cursor: grabbing;
+}
+
+.projects-carousel .swiper-pagination-bullet {
+  background: #a5b4fc; /* indigo-300 */
+  opacity: 0.7;
+}
+
+.projects-carousel .swiper-pagination-bullet-active {
+  background: #6366f1; /* indigo-500 */
+  opacity: 1;
+}
+
