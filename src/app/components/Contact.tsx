@@ -1,5 +1,13 @@
-import { ContactClient } from "./ContactClient";
+"use client";
+import React, { Suspense, lazy } from "react";
 import { Position } from "./ui/globe";
+import { LoaderOne } from "./ui/loader"; // Importar o LoaderOne
+
+const LazyContactClient = lazy(() =>
+  import("./ContactClient").then((module) => ({
+    default: module.ContactClient,
+  }))
+);
 
 export function Contact() {
   const globeConfig = {
@@ -99,9 +107,10 @@ export function Contact() {
             Estou sempre aberto a novas oportunidades e colaborações.
           </p>
         </div>
-        <ContactClient globeConfig={globeConfig} sampleArcs={sampleArcs} />
+        <Suspense fallback={<LoaderOne />}>
+          <LazyContactClient globeConfig={globeConfig} sampleArcs={sampleArcs} />
+        </Suspense>
       </div>
     </section>
   );
 }
-

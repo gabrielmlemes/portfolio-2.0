@@ -146,10 +146,11 @@ export function Globe({ globeConfig, data }: WorldProps) {
     // remove duplicates for same lat and lng
     const filteredPoints = points.filter(
       (v, i, a) =>
-        a.findIndex((v2) =>
-          ["lat", "lng"].every(
-            (k) => v2[k as "lat" | "lng"] === v[k as "lat" | "lng"]
-          )
+        a.findIndex(
+          (v2) =>
+            ["lat", "lng"].every(
+              (k) => v2[k as "lat" | "lng"] === v[k as "lat" | "lng"]
+            )
         ) === i
     );
 
@@ -243,8 +244,7 @@ export function WebGLRendererConfig() {
   useEffect(() => {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
-    gl.setClearColor(0xffaaff, 0);
-  }, []);
+  }, [gl, size.width, size.height]); // Adicionadas dependências para redimensionamento
 
   return null;
 }
@@ -310,4 +310,3 @@ export function genRandomNumbers(min: number, max: number, count: number) {
 
   return arr;
 }
-
