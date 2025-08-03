@@ -8,6 +8,7 @@ import {
   SiReact,
   SiNodedotjs,
   SiExpress,
+  SiMongodb,
 } from "react-icons/si";
 
 export const techIconsMap: Record<string, JSX.Element> = {
@@ -19,5 +20,6 @@ export const techIconsMap: Record<string, JSX.Element> = {
   react: <SiReact className="w-5 h-5 text-cyan-500" />,
   nodejs: <SiNodedotjs className="w-5 h-5 text-green-600" />,
   express: <SiExpress className="w-5 h-5 text-white" />,
+  mongodb: <SiMongodb className="w-5 h-5 text-green-600" />,
 };
 

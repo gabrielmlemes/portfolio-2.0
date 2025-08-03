@@ -39,11 +39,14 @@ export function ContactForm() {
   const messageValue = watch("message");
 
   // Combine o ref do react-hook-form com o seu ref local
-  const combinedMessageRef = useCallback((element: HTMLTextAreaElement) => {
-    messageRef.current = element; // Seu ref local
-    const { ref } = register("message"); // Obtenha o ref do react-hook-form
-    ref(element); // Passe o elemento para o ref do react-hook-form
-  }, [register]);
+  const combinedMessageRef = useCallback(
+    (element: HTMLTextAreaElement) => {
+      messageRef.current = element; // Seu ref local
+      const { ref } = register("message"); // Obtenha o ref do react-hook-form
+      ref(element); // Passe o elemento para o ref do react-hook-form
+    },
+    [register]
+  );
 
   useEffect(() => {
     if (messageRef.current) {
@@ -123,7 +126,7 @@ export function ContactForm() {
               ? "border-red-500"
               : "border-slate-300 dark:border-slate-700"
           } focus:ring-0 focus:border-indigo-500 transition-colors py-2 px-1`}
-          placeholder="seu.email@exemplo.com"
+          placeholder="Digite seu email"
         />
         {errors.email && (
           <p className="absolute bottom-0 text-xs text-red-500">

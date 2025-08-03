@@ -46,15 +46,11 @@ export const ProjectsList: Projects[] = [
   {
     name: "The Pizza",
     description:
-      "The Pizza é um sistema de controle de pedidos interativo para pizzarias e restaurantes, desenvolvido para proporcionar uma experiência de usuário fluida e intuitiva.",
+      "The Pizza é um sistema de controle de pedidos interativo para pizzarias e restaurantes, desenvolvido para proporcionar uma experiência de usuário fluida.",
     technologies: [
       {
         name: "Next.js",
         icon: "nextjs",
-      },
-      {
-        name: "Node.js",
-        icon: "nodejs",
       },
       {
         name: "Express",
@@ -77,18 +73,18 @@ export const ProjectsList: Projects[] = [
         icon: "postgresql",
       },
     ],
-    githubUrl: "https://github.com/gabrielmlemes/fsw-barber",
-    deployedUrl: "https://thepizzaweb.vercel.app/dashboard",
-    image: "/projects/portfolio-website.jpg",
+    githubUrl: "https://github.com/gabrielmlemes/pizzaria-frontend",
+    deployedUrl: "https://thepizzaweb.vercel.app/",
+    image: "/projects/thepizzajpg.jpg",
   },
   {
-    name: "Project 3",
+    name: "Dev Controle",
     description:
-      "Uma plataforma intuitiva, moderna e totalmente responsiva para agendar e gerenciar serviços de barbearias com facilidade!",
+      "Uma plataforma moderna e intuitiva, projetada para que o os usuários possam cadastrar clientes e organizar chamados de forma prática e eficiente.",
     technologies: [
       {
-        name: "React",
-        icon: "react",
+        name: "Next.js",
+        icon: "nextjs",
       },
       {
         name: "TypeScript",
@@ -98,10 +94,18 @@ export const ProjectsList: Projects[] = [
         name: "TailwindCSS",
         icon: "tailwind",
       },
+      {
+        name: "Prisma",
+        icon: "prisma",
+      },
+      {
+        name: "MongoDB",
+        icon: "mongodb",
+      },
     ],
-    githubUrl: "https://github.com/gabrielmlemes/fsw-barber",
-    deployedUrl: "https://fsw-barber-kohl.vercel.app/",
-    image: "/projects/portfolio-website.jpg",
+    githubUrl: "https://github.com/gabrielmlemes/devcontrole",
+    deployedUrl: "https://mydevcontrole.vercel.app/",
+    image: "/projects/devcontrole.jpg",
   },
 ];
 
