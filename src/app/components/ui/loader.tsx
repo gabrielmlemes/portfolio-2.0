@@ -1,13 +1,13 @@
 "use client";
-import { motion } from "framer-motion"; // Alterado de "motion/react" para "framer-motion"
+import { motion, Transition } from "framer-motion";
 import React from "react";
 
 export const LoaderOne = () => {
-  const transition = (x: number) => {
+  const transition = (x: number): Transition => {
     return {
       duration: 1,
       repeat: Infinity,
-      repeatType: "loop" as const,
+      repeatType: "loop",
       delay: x * 0.2,
       ease: "easeInOut",
     };
@@ -49,11 +49,11 @@ export const LoaderOne = () => {
 };
 
 export const LoaderTwo = () => {
-  const transition = (x: number) => {
+  const transition = (x: number): Transition => {
     return {
       duration: 2,
       repeat: Infinity,
-      repeatType: "loop" as const,
+      repeatType: "loop",
       delay: x * 0.2,
       ease: "easeInOut",
     };
@@ -129,7 +129,7 @@ export const LoaderFour = ({ text = "Loading..." }: { text?: string }) => {
     <div className="relative font-bold text-black [perspective:1000px] dark:text-white">
       <motion.span
         animate={{
-          skew: [0, -40, 0],
+          skewX: [0, -40, 0], // Alterado de 'skew' para 'skewX'
           scaleX: [1, 2, 1],
         }}
         transition={{
