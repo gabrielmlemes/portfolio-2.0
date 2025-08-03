@@ -1,5 +1,6 @@
 import { About } from "./components/About";
 import { Hero } from "./components/Hero";
+import { Projects } from "./components/Projects";
 
 const Page = () => {
   return (
@@ -10,8 +11,10 @@ const Page = () => {
       <section id="sobre">
         <About />
       </section>
-      <section id="projetos">{/* <Hero /> */}</section>
-      <section id="contato">{/* <Hero /> */}</section>
+      <section id="projetos">
+        <Projects />
+      </section>
+      <section id="contato"></section>
     </div>
   );
 };
