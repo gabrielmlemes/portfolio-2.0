@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
 import { z } from "zod";
@@ -28,7 +28,7 @@ export function ContactForm() {
       name: "",
       email: "",
       message: "",
-    }, // Added default values
+    },
   });
 
   const [status, setStatus] = useState<
@@ -37,6 +37,13 @@ export function ContactForm() {
 
   const messageRef = useRef<HTMLTextAreaElement>(null);
   const messageValue = watch("message");
+
+  // Combine o ref do react-hook-form com o seu ref local
+  const combinedMessageRef = useCallback((element: HTMLTextAreaElement) => {
+    messageRef.current = element; // Seu ref local
+    const { ref } = register("message"); // Obtenha o ref do react-hook-form
+    ref(element); // Passe o elemento para o ref do react-hook-form
+  }, [register]);
 
   useEffect(() => {
     if (messageRef.current) {
@@ -49,13 +56,13 @@ export function ContactForm() {
     setStatus("loading");
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID", // Substitua pelo seu Service ID
-        "YOUR_TEMPLATE_ID", // Substitua pelo seu Template ID
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
         data,
-        "YOUR_PUBLIC_KEY" // Substitua pela sua Public Key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
       );
       setStatus("success");
-      reset(); // Reset form fields on successful submission
+      reset();
     } catch (error) {
       console.error("FAILED...", error);
       setStatus("error");
@@ -139,9 +146,9 @@ export function ContactForm() {
         </label>
         <textarea
           id="message"
-          rows={1} // Initial rows set to 1
-          {...register("message")}
-          ref={messageRef}
+          rows={1}
+          {...register("message", { shouldUnregister: true })} // Adicionado shouldUnregister
+          ref={combinedMessageRef}
           className={`mt-1 block w-full bg-transparent outline-none border-0 border-b-2 resize-none overflow-hidden ${
             errors.message
               ? "border-red-500"
