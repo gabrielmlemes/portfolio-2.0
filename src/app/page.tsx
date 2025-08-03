@@ -1,4 +1,5 @@
 import { About } from "./components/About";
+import { Contact } from "./components/Contact";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
 
@@ -14,7 +15,9 @@ const Page = () => {
       <section id="projetos">
         <Projects />
       </section>
-      <section id="contato"></section>
+      <section id="contato">
+        <Contact />
+      </section>
     </div>
   );
 };
