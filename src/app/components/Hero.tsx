@@ -9,7 +9,7 @@ export function Hero() {
         <HeroClient />
       </div>
       <Mouse />
-      <div className="absolute bottom-0 left-0 z-10 h-48 w-full bg-gradient-to-t from-black to-transparent"></div>
+      <div className="absolute bottom-0 left-0 z-10 h-48 w-full bg-gradient-to-t from-[var(--background)] to-transparent"></div>
     </div>
   );
 }

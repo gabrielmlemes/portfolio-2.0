@@ -55,7 +55,7 @@ export function About() {
       ref={ref}
       id="sobre"
       aria-labelledby="about-heading"
-      className="py-24 sm:py-32 min-h-screen w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden"
+            className="py-24 sm:py-32 min-h-screen w-full flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-x-hidden"
     >
       {/* <Spotlight /> */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

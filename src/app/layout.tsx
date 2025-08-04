@@ -1,21 +1,24 @@
+import { Roboto } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
 import Navbar from "./components/Navbar";
 
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"], display: "swap" });
+
 export const metadata: Metadata = {
-  title: "Gabriel Lemes | Portfolio",
+  title: "Gabriel Lemes | Portfólio",
   description:
     "Explore o portfólio de Gabriel Lemes, um desenvolvedor de software focado em criar aplicações modernas e performáticas",
   openGraph: {
     title: "Gabriel Lemes | Portfolio",
     description:
       "Explore o portfólio de Gabriel Lemes, um desenvolvedor de software focado em criar aplicações modernas e performáticas",
-    url: "https://gabriellemes.vercel.app",
+    url: "https://gabrielmlemes.vercel.app/",
     siteName: "Gabriel Lemes",
     images: [
       {
-        url: "/me.jpeg",
+        url: "/gabriel-image.png",
         width: 800,
         height: 600,
         alt: "Gabriel Lemes",
@@ -26,10 +29,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gabriel Lemes | Portfolio",
+    title: "Gabriel Lemes | Portfólio",
     description:
       "Explore o portfólio de Gabriel Lemes, um desenvolvedor de software focado em criar aplicações modernas e performáticas",
-    images: ["/me.jpeg"],
+    images: ["/gabriel-image.png"],
   },
 };
 
@@ -40,8 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      
-      <body>
+      <body className={roboto.className}>
         <Navbar />
         {children}
       </body>

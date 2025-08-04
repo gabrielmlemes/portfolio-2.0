@@ -35,7 +35,7 @@ export function ContactClient({ globeConfig, sampleArcs }: ContactClientProps) {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="w-full md:w-1/2 lg:w-2/5 bg-white dark:bg-slate-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-slate-800" // Adicionadas as classes de estilo aqui
+        className="w-full md:w-1/2 lg:w-2/5 bg-white dark:bg-[var(--background)] backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-slate-800" // Adicionadas as classes de estilo aqui
       >
         <ContactForm />
       </motion.div>
