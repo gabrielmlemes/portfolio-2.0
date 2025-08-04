@@ -12,11 +12,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #050505;
-    --foreground: #ededed;
-  }
+html.dark {
+  --background: #050505;
+  --foreground: #ededed;
 }
 
 body {
@@ -55,11 +53,9 @@ body {
   color: #4f46e5; /* indigo-600 */
 }
 
-@media (prefers-color-scheme: dark) {
-  .projects-carousel .swiper-button-next::after,
-  .projects-carousel .swiper-button-prev::after {
-    color: white; /* indigo-400 */
-  }
+.projects-carousel .swiper-button-next::after,
+.projects-carousel .swiper-button-prev::after {
+  color: white; /* indigo-400 */
 }
 
 .projects-carousel .swiper-slide {
