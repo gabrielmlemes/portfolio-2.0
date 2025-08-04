@@ -91,7 +91,7 @@ export function ContactForm() {
           type="text"
           id="name"
           {...register("name")}
-          className={`mt-1 block w-full outline-none bg-transparent border-0 border-b-2 ${
+          className={`mt-1 block w-full outline-none bg-transparent border-0 border-b-2 placeholder-gray-300  ${
             errors.name
               ? "border-red-500"
               : "border-slate-300 dark:border-slate-700"
@@ -121,7 +121,7 @@ export function ContactForm() {
           type="email"
           id="email"
           {...register("email")}
-          className={`mt-1 block outline-none w-full bg-transparent border-0 border-b-2 ${
+          className={`mt-1 block outline-none w-full bg-transparent border-0 border-b-2 placeholder-gray-300  ${
             errors.email
               ? "border-red-500"
               : "border-slate-300 dark:border-slate-700"
@@ -152,7 +152,7 @@ export function ContactForm() {
           rows={1}
           {...register("message", { shouldUnregister: true })} // Adicionado shouldUnregister
           ref={combinedMessageRef}
-          className={`mt-1 block w-full bg-transparent outline-none border-0 border-b-2 resize-none overflow-hidden ${
+          className={`mt-1 block w-full bg-transparent outline-none border-0 border-b-2 placeholder-gray-300  resize-none overflow-hidden ${
             errors.message
               ? "border-red-500"
               : "border-slate-300 dark:border-slate-700"
@@ -174,7 +174,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex cursor-pointer items-center justify-center gap-2 py-3 px-4 border border-transparent rounded-lg shadow-lg text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-slate-900 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex cursor-pointer items-center justify-center gap-2 py-3 px-4 border border-transparent rounded-lg shadow-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-[var(--background)] transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <FiSend />
           {isSubmitting ? "Enviando..." : "Enviar Mensagem"}

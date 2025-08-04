@@ -31,7 +31,7 @@ function HighlightText({
   React.useImperativeHandle(ref, () => localRef.current as HTMLSpanElement);
 
   const inViewResult = useInView(localRef, {
-    once: true,
+    once: false,
     margin: inViewMargin,
   });
   const isInView = !inView || inViewResult;
@@ -62,3 +62,4 @@ function HighlightText({
 }
 
 export { HighlightText, type HighlightTextProps };
+
