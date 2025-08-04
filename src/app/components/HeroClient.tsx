@@ -37,7 +37,7 @@ export function HeroClient() {
     >
       <motion.h1
         variants={itemVariants}
-        className="text-5xl font-bold tracking-tight text-transparent sm:text-7xl bg-gradient-to-br from-slate-200 to-slate-400 bg-clip-text drop-shadow-md"
+        className="text-6xl leading-16 font-bold tracking-tight text-transparent sm:text-7xl bg-gradient-to-br from-slate-200 to-slate-400 bg-clip-text drop-shadow-md"
       >
         Gabriel Lemes
       </motion.h1>
@@ -94,4 +94,3 @@ export function HeroClient() {
     </motion.div>
   );
 }
-

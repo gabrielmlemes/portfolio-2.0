@@ -1,4 +1,5 @@
 import { HeroClient } from "./HeroClient";
+import { Mouse } from "./ui/Mouse";
 
 export function Hero() {
   return (
@@ -7,7 +8,9 @@ export function Hero() {
       <div className="relative z-10 px-4">
         <HeroClient />
       </div>
+      <Mouse />
       <div className="absolute bottom-0 left-0 z-10 h-48 w-full bg-gradient-to-t from-black to-transparent"></div>
     </div>
   );
 }
+
