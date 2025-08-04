@@ -4,7 +4,7 @@ import {
   CodeBracketIcon,
   PaintBrushIcon,
 } from "@heroicons/react/24/outline";
-import { Spotlight } from "./ui/spotlight";
+// import { Spotlight } from "./ui/spotlight";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -55,9 +55,9 @@ export function About() {
       ref={ref}
       id="sobre"
       aria-labelledby="about-heading"
-      className="py-24 sm:py-32 min-h-screen w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative"
+      className="py-24 sm:py-32 min-h-screen w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden"
     >
-      <Spotlight />
+      {/* <Spotlight /> */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <motion.h2

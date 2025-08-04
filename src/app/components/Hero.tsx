@@ -6,7 +6,7 @@ import { Mouse } from "./ui/Mouse";
 
 export function Hero() {
   return (
-    <section className="min-h-screen w-full bg-black flex flex-col items-center justify-center rounded-md relative">
+    <section className="min-h-screen w-full bg-black flex flex-col items-center justify-center rounded-md relative overflow-hidden">
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

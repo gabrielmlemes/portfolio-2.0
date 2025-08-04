@@ -30,16 +30,6 @@ const MemoizedWorld = memo(World);
 export function ContactClient({ globeConfig, sampleArcs }: ContactClientProps) {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-      {/* Globe Section */}
-      <motion.div
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full md:w-1/2 lg:w-2/5 h-96 md:h-[30rem] relative"
-      >
-        <MemoizedWorld data={sampleArcs} globeConfig={globeConfig} />
-      </motion.div>
-
       {/* Form Section */}
       <motion.div
         initial={{ x: 100, opacity: 0 }}
@@ -48,6 +38,16 @@ export function ContactClient({ globeConfig, sampleArcs }: ContactClientProps) {
         className="w-full md:w-1/2 lg:w-2/5 bg-white dark:bg-slate-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-slate-800" // Adicionadas as classes de estilo aqui
       >
         <ContactForm />
+      </motion.div>
+
+      {/* Globe Section */}
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="w-full md:w-1/2 lg:w-2/5 h-96 md:h-[30rem] relative"
+      >
+        <MemoizedWorld data={sampleArcs} globeConfig={globeConfig} />
       </motion.div>
     </div>
   );

@@ -19,7 +19,7 @@ export function Projects() {
   const featured = ProjectsList.slice(0, 3);
 
   return (
-    <section className="min-h-screen w-full bg-black py-30">
+    <section className="min-h-screen w-full bg-black py-30 px-4">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="flex items-center justify-center gap-2 text-2xl font-bold leading-7 text-indigo-600 dark:text-indigo-400">
           Soluções
@@ -50,7 +50,7 @@ export function Projects() {
       </div>
 
       {/* Featured Project Carousel */}
-      <div className="mx-auto mt-16 w-full max-w-6xl px-4">
+      <div className="mx-auto mt-16 w-full max-w-6xl">
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}
