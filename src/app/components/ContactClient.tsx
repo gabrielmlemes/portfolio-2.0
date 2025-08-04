@@ -45,7 +45,7 @@ export function ContactClient({ globeConfig, sampleArcs }: ContactClientProps) {
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full md:w-1/2 lg:w-2/5 h-96 md:h-[30rem] relative"
+        className="w-full md:w-1/2 lg:w-2/5 h-80 md:h-[30rem] relative"
       >
         <MemoizedWorld data={sampleArcs} globeConfig={globeConfig} />
       </motion.div>
