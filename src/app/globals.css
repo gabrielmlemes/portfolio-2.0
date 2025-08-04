@@ -35,7 +35,7 @@ body {
 /* Swiper Customization */
 .projects-carousel .swiper-button-next,
 .projects-carousel .swiper-button-prev {
-  top: 35%;
+  top: 25%;
   transform: translateY(-50%);
 }
 
