@@ -37,14 +37,14 @@ export function HeroClient() {
     >
       <motion.h1
         variants={itemVariants}
-        className="text-6xl leading-16 font-bold tracking-tight text-transparent sm:text-7xl bg-gradient-to-br from-slate-200 to-slate-400 bg-clip-text drop-shadow-md"
+        className="text-6xl font-bold tracking-tight text-transparent sm:text-7xl lg:text-9xl bg-gradient-to-br from-slate-200 to-slate-400 bg-clip-text drop-shadow-md"
       >
         Gabriel Lemes
       </motion.h1>
 
       <motion.p
         variants={itemVariants}
-        className="mt-4 max-w-2xl text-base text-slate-400 sm:text-lg"
+        className="mt-4 max-w-2xl text-base text-slate-400 sm:text-lg lg:text-xl"
       >
         Desenvolvedor Frontend
       </motion.p>
@@ -94,3 +94,4 @@ export function HeroClient() {
     </motion.div>
   );
 }
+

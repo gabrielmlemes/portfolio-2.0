@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
 import { z } from "zod";
 import emailjs from "@emailjs/browser";
@@ -10,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 const contactFormSchema = z.object({
   name: z.string().min(3, "O nome deve ter pelo menos 3 caracteres."),
   email: z.string().email("Por favor, insira um email válido."),
-  message: z.string().min(10, "A mensagem deve ter pelo menos 10 caracteres."),
+  message: z.string().min(5, "A mensagem deve ter pelo menos 5 caracteres."),
 });
 
 type ContactFormInputs = z.infer<typeof contactFormSchema>;
@@ -74,13 +73,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        className="relative pb-4"
-      >
+      <div className="relative pb-4">
         <label
           htmlFor="name"
           className="block text-sm font-medium text-neutral-500 dark:text-neutral-400"
@@ -91,7 +84,7 @@ export function ContactForm() {
           type="text"
           id="name"
           {...register("name")}
-          className={`mt-1 block w-full outline-none bg-transparent border-0 border-b-2 placeholder-gray-300  ${
+          className={`mt-1 block w-full outline-none bg-transparent border-0 border-b-2 placeholder-gray-300 text-white ${
             errors.name
               ? "border-red-500"
               : "border-slate-300 dark:border-slate-700"
@@ -103,14 +96,8 @@ export function ContactForm() {
             {errors.name.message}
           </p>
         )}
-      </motion.div>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        className="relative pb-4"
-      >
+      </div>
+      <div className="relative pb-4">
         <label
           htmlFor="email"
           className="block text-sm font-medium text-neutral-500 dark:text-neutral-400"
@@ -121,7 +108,7 @@ export function ContactForm() {
           type="email"
           id="email"
           {...register("email")}
-          className={`mt-1 block outline-none w-full bg-transparent border-0 border-b-2 placeholder-gray-300  ${
+          className={`mt-1 block outline-none w-full bg-transparent border-0 border-b-2 placeholder-gray-300 text-white ${
             errors.email
               ? "border-red-500"
               : "border-slate-300 dark:border-slate-700"
@@ -133,14 +120,8 @@ export function ContactForm() {
             {errors.email.message}
           </p>
         )}
-      </motion.div>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        className="relative pb-4"
-      >
+      </div>
+      <div className="relative pb-4">
         <label
           htmlFor="message"
           className="block text-sm font-medium text-neutral-500 dark:text-neutral-400"
@@ -152,7 +133,7 @@ export function ContactForm() {
           rows={1}
           {...register("message", { shouldUnregister: true })} // Adicionado shouldUnregister
           ref={combinedMessageRef}
-          className={`mt-1 block w-full bg-transparent outline-none border-0 border-b-2 placeholder-gray-300  resize-none overflow-hidden ${
+          className={`mt-1 block w-full bg-transparent outline-none border-0 border-b-2 placeholder-gray-300 text-white resize-none overflow-hidden ${
             errors.message
               ? "border-red-500"
               : "border-slate-300 dark:border-slate-700"
@@ -164,13 +145,8 @@ export function ContactForm() {
             {errors.message.message}
           </p>
         )}
-      </motion.div>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-      >
+      </div>
+      <div>
         <button
           type="submit"
           disabled={isSubmitting}
@@ -189,8 +165,7 @@ export function ContactForm() {
             Ocorreu um erro ao enviar a mensagem. Tente novamente.
           </p>
         )}
-      </motion.div>
+      </div>
     </form>
   );
 }
-
