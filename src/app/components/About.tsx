@@ -7,6 +7,7 @@ import {
 // import { Spotlight } from "./ui/spotlight";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { HighlightText } from "./ui/highlight-text";
 
 const features = [
   {
@@ -55,7 +56,7 @@ export function About() {
       ref={ref}
       id="sobre"
       aria-labelledby="about-heading"
-            className="py-24 sm:py-32 min-h-screen w-full flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-x-hidden"
+      className="py-30 sm:py-32 min-h-screen w-full flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-x-hidden"
     >
       {/* <Spotlight /> */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -66,7 +67,10 @@ export function About() {
             transition={{ duration: 0.5 }}
             className="text-2xl font-bold leading-7 text-indigo-600 dark:text-indigo-400"
           >
-            Tecnologia & Inovação
+            <HighlightText
+              text="Tecnologia & Inovação"
+              className="text-white"
+            />
           </motion.h2>
 
           <motion.p
@@ -93,7 +97,7 @@ export function About() {
               className="relative pl-16"
             >
               <dt className="text-base font-semibold leading-7 text-slate-900 dark:text-white">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
                   <feature.icon
                     className="h-6 w-6 text-white"
                     aria-hidden="true"

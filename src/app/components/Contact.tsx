@@ -32,7 +32,7 @@ export function Contact() {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  const colors = ["#60A5FA", "#3B82F6", "#2563EB"];
   const sampleArcs: Position[] = [
     // Americas to Europe
     {

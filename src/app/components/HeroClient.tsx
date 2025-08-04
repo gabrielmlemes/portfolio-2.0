@@ -55,7 +55,7 @@ export function HeroClient() {
       >
         <Link
           href="#projetos"
-          className="group inline-flex items-center justify-center gap-2 rounded-full bg-indigo-600 px-5 py-2.5 text-sm text-white transition-all duration-300 hover:bg-indigo-700 sm:px-6 sm:py-3 sm:text-base"
+          className="group inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-sm text-white transition-all duration-300 hover:bg-blue-700 sm:px-6 sm:py-3 sm:text-base"
         >
           Ver Projetos
           <HiOutlineArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -70,7 +70,7 @@ export function HeroClient() {
           href="https://github.com/gabrielmlemes"
           target="_blank"
           aria-label="GitHub"
-          className="text-slate-500 transition-colors hover:text-indigo-400"
+          className="text-slate-300 transition-colors hover:text-blue-400"
         >
           <FaGithub size={24} />
         </Link>
@@ -78,7 +78,7 @@ export function HeroClient() {
           href="https://www.linkedin.com/in/gabrielmlemes/"
           target="_blank"
           aria-label="LinkedIn"
-          className="text-slate-500 transition-colors hover:text-indigo-400"
+          className="text-slate-300 transition-colors hover:text-blue-400"
         >
           <FaLinkedin size={24} />
         </Link>
@@ -86,7 +86,7 @@ export function HeroClient() {
           href="https://wa.me/5561986626251?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio%21"
           target="_blank"
           aria-label="WhatsApp"
-          className="text-slate-500 transition-colors hover:text-indigo-400"
+          className="text-slate-300 transition-colors hover:text-blue-400"
         >
           <FaWhatsapp size={24} />
         </Link>

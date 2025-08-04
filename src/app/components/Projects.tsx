@@ -25,7 +25,7 @@ export function Projects() {
           Soluções
           <RotatingText
             texts={["rápidas", "modernas", "criativas", "performáticas"]}
-            mainClassName="px-2 sm:px-3 bg-indigo-600 py-0.5 sm:py-1 md:py-2 rounded-lg text-2xl font-bold text-white"
+            mainClassName="px-2 sm:px-3 bg-blue-600 py-0.5 sm:py-1 md:py-2 rounded-lg text-2xl font-bold text-white"
             staggerFrom={"last"}
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
