@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import { AnimatedShinyText } from "./ui/shiny-text";
+import { HoverBorderGradient } from "./ui/button";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -50,12 +51,15 @@ export function HeroClient() {
         variants={itemVariants}
         className="mt-6 flex justify-center sm:mt-8"
       >
-        <Link
-          href="#projetos"
-          className="group inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-sm text-white transition-all duration-300 hover:bg-blue-700 sm:px-6 sm:py-3 sm:text-base"
-        >
-          Ver Projetos
-          <HiOutlineArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+        <Link href="#projetos">
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="dark:bg-black cursor-pointer bg-white text-black dark:text-white flex items-center justify-center gap-2"
+          >
+            Ver Projetos
+            <HiOutlineArrowRight />
+          </HoverBorderGradient>
         </Link>
       </motion.div>
 
