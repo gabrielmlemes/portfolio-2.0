@@ -1,7 +1,7 @@
 "use client";
 
 import { ProjectsList } from "@/types/projects";
-import ProjectCard from "./ui/project-card";
+import ProjectCardComponent from "./ui/project-card";
 import RotatingText from "./ui/rotate-text";
 
 // Import Swiper React components
@@ -68,7 +68,7 @@ export function Projects() {
         >
           {featured.map((project) => (
             <SwiperSlide key={project.name}>
-              <ProjectCard project={project} />
+              <ProjectCardComponent project={project} />
             </SwiperSlide>
           ))}
         </Swiper>
