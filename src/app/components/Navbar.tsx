@@ -12,7 +12,7 @@ export default function Navigation() {
       className="fixed left-0 top-0 z-50 w-full px-4 pt-6"
     >
       <nav
-        className="mx-auto flex h-16 max-w-xs items-center justify-center rounded-full border border-white/10 bg-black/30 p-2 shadow-lg backdrop-blur-md sm:max-w-lg"
+        className="mx-auto flex h-16 max-w-xs items-center justify-center rounded-full border border-slate-100/10 bg-black/30 p-2 shadow-lg backdrop-blur-md sm:max-w-lg"
         role="navigation"
         aria-label="Menu principal"
       >
@@ -36,4 +36,3 @@ export default function Navigation() {
     </motion.header>
   );
 }
-

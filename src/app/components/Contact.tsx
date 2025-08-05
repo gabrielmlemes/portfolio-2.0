@@ -21,7 +21,7 @@ export function Contact() {
           className="text-center mb-12"
         >
           <TrueFocus
-            sentence="Foco na qualidade"
+            sentence="Foco em qualidade"
             manualMode={false}
             blurAmount={5}
             borderColor="#155DFC"

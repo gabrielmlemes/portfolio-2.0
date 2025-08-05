@@ -44,7 +44,7 @@ export function HeroClient() {
       </motion.h1>
 
       <motion.p className="max-w-2xl sm:text-lg lg:text-xl">
-        <AnimatedShinyText>Desenvolvedor Frontend</AnimatedShinyText>
+        <AnimatedShinyText>Desenvolvedor Front-end</AnimatedShinyText>
       </motion.p>
 
       <motion.div variants={itemVariants} className="flex justify-center">
