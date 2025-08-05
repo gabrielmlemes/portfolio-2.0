@@ -32,7 +32,7 @@ const itemVariants: Variants = {
 export function HeroClient() {
   return (
     <motion.div
-      className="flex flex-col items-center text-center"
+      className="flex flex-col items-center gap-8 text-center"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -43,19 +43,16 @@ export function HeroClient() {
         </AnimatedShinyText>
       </motion.h1>
 
-      <motion.p className="mt-4 max-w-2xl sm:text-lg lg:text-xl">
+      <motion.p className="max-w-2xl sm:text-lg lg:text-xl">
         <AnimatedShinyText>Desenvolvedor Frontend</AnimatedShinyText>
       </motion.p>
 
-      <motion.div
-        variants={itemVariants}
-        className="mt-6 flex justify-center sm:mt-8"
-      >
+      <motion.div variants={itemVariants} className="flex justify-center">
         <Link href="#projetos">
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
-            className="dark:bg-black cursor-pointer bg-white text-black dark:text-white flex items-center justify-center gap-2"
+            className="dark:bg-black cursor-pointer bg-white text-black dark:text-slate-200 flex items-center justify-center gap-2"
           >
             Ver Projetos
             <HiOutlineArrowRight />
@@ -63,9 +60,13 @@ export function HeroClient() {
         </Link>
       </motion.div>
 
-      <motion.div variants={itemVariants} className="mt-6 flex items-center justify-center gap-6 sm:mt-8">
+      <motion.div
+        variants={itemVariants}
+        className="flex items-center justify-center"
+      >
         <SocialLinks />
       </motion.div>
     </motion.div>
   );
 }
+

@@ -8,7 +8,10 @@ export function ArrowDown({ className }: { className?: string }) {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 1, ease: "easeOut" }}
-      className={cn("absolute bottom-5 animate-bounce text-white", className)}
+      className={cn(
+        "absolute bottom-5 animate-bounce text-neutral-400/70",
+        className
+      )}
     >
       <svg
         width="24"
@@ -28,4 +31,3 @@ export function ArrowDown({ className }: { className?: string }) {
     </motion.div>
   );
 }
-

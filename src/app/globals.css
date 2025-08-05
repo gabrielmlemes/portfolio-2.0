@@ -32,6 +32,12 @@ body {
   }
 }
 
+@media (prefers-reduced-motion) {
+  .animate-shiny-text {
+    --animate-shiny-text: none;
+  }
+}
+
 @keyframes scroll-down {
   0% {
     opacity: 1;

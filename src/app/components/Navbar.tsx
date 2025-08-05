@@ -21,11 +21,11 @@ export default function Navigation() {
             <li key={item.name}>
               <Link
                 href={item.href}
-                className="flex flex-col items-center justify-center gap-1 text-center text-slate-300 transition-colors hover:text-white sm:flex-row sm:gap-2"
+                className="flex flex-col items-center justify-center gap-1 text-center text-slate-300 transition-colors hover:text-white"
                 aria-label={item.name}
               >
                 {item.icon}
-                <span className="hidden text-xs font-medium sm:block">
+                <span className="hidden sm:block text-xs font-medium">
                   {item.name}
                 </span>
               </Link>
