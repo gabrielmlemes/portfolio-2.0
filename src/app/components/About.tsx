@@ -4,10 +4,9 @@ import {
   CodeBracketIcon,
   PaintBrushIcon,
 } from "@heroicons/react/24/outline";
-// import { Spotlight } from "./ui/spotlight";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { HighlightText } from "./ui/highlight-text";
+import ScrollFloat from "./ui/scroll-text";
 
 const features = [
   {
@@ -32,7 +31,7 @@ const features = [
 
 export function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-100px" });
+  const isInView = useInView(ref, { once: false });
 
   // Variants for the main container to stagger children
   const containerVariants = {
@@ -53,7 +52,6 @@ export function About() {
 
   return (
     <section
-      ref={ref}
       id="sobre"
       aria-labelledby="about-heading"
       className="py-30 sm:py-32 min-h-screen w-full flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-x-hidden"
@@ -62,26 +60,25 @@ export function About() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <motion.h2
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-2xl font-bold leading-7 text-indigo-600 dark:text-indigo-400"
-          >
-            <HighlightText
-              text="Tecnologia & Inovação"
-              className="text-white"
-            />
-          </motion.h2>
-
-          <motion.p
+            ref={ref}
             id="about-heading"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-2xl font-bold leading-7 text-blue-500 shadow-2xl"
+          >
+            Tecnologia & Inovação
+          </motion.h2>
+
+          <ScrollFloat
+            animationDuration={1}
+            ease="back.inOut(2)"
+            scrollStart="center bottom+=50%"
+            scrollEnd="bottom bottom-=40%"
+            stagger={0.03}
           >
             O que você encontra nos meus projetos
-          </motion.p>
+          </ScrollFloat>
         </div>
 
         <motion.dl

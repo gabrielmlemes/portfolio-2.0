@@ -24,7 +24,7 @@ export function Projects() {
         <h2 className="flex items-center justify-center gap-2 text-2xl font-bold leading-7 text-white">
           Soluções
           <RotatingText
-            texts={["rápidas", "modernas", "criativas", "performáticas"]}
+            texts={["rápidas", "modernas", "criativas", "seguras"]}
             mainClassName="px-2 sm:px-3 bg-blue-600 py-0.5 sm:py-1 md:py-2 rounded-lg text-2xl font-bold text-white"
             staggerFrom={"last"}
             initial={{ y: "100%" }}

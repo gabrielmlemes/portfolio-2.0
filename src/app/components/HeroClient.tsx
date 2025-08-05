@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineArrowRight } from "react-icons/hi";
+import { AnimatedShinyText } from "./ui/shiny-text";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,18 +36,14 @@ export function HeroClient() {
       initial="hidden"
       animate="visible"
     >
-      <motion.h1
-        variants={itemVariants}
-        className="text-6xl font-bold tracking-tight text-transparent sm:text-7xl lg:text-9xl bg-gradient-to-br from-slate-200 to-slate-400 bg-clip-text drop-shadow-md"
-      >
-        Gabriel Lemes
+      <motion.h1 variants={itemVariants}>
+        <AnimatedShinyText className="text-6xl font-bold tracking-tight text-transparent sm:text-7xl  drop-shadow-md">
+          Gabriel Lemes
+        </AnimatedShinyText>
       </motion.h1>
 
-      <motion.p
-        variants={itemVariants}
-        className="mt-4 max-w-2xl text-base text-slate-400 sm:text-lg lg:text-xl"
-      >
-        Desenvolvedor Frontend
+      <motion.p className="mt-4 max-w-2xl sm:text-lg lg:text-xl">
+        <AnimatedShinyText>Desenvolvedor Frontend</AnimatedShinyText>
       </motion.p>
 
       <motion.div
