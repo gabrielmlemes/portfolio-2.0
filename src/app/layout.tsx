@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"], display: "swap" });
 
@@ -46,6 +47,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

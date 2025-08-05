@@ -2,7 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { SocialLinks } from "./ui/SocialLinks";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import { AnimatedShinyText } from "./ui/shiny-text";
 import { HoverBorderGradient } from "./ui/button";
@@ -63,34 +63,8 @@ export function HeroClient() {
         </Link>
       </motion.div>
 
-      <motion.div
-        variants={itemVariants}
-        className="mt-6 flex items-center justify-center gap-6 sm:mt-8"
-      >
-        <Link
-          href="https://github.com/gabrielmlemes"
-          target="_blank"
-          aria-label="GitHub"
-          className="text-slate-300 transition-colors hover:text-blue-400"
-        >
-          <FaGithub size={24} />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/gabrielmlemes/"
-          target="_blank"
-          aria-label="LinkedIn"
-          className="text-slate-300 transition-colors hover:text-blue-400"
-        >
-          <FaLinkedin size={24} />
-        </Link>
-        <Link
-          href="https://wa.me/5561986626251?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio%21"
-          target="_blank"
-          aria-label="WhatsApp"
-          className="text-slate-300 transition-colors hover:text-blue-400"
-        >
-          <FaWhatsapp size={24} />
-        </Link>
+      <motion.div variants={itemVariants} className="mt-6 flex items-center justify-center gap-6 sm:mt-8">
+        <SocialLinks />
       </motion.div>
     </motion.div>
   );

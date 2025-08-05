@@ -12,7 +12,7 @@ export default function Navigation() {
       className="fixed left-0 top-0 z-50 w-full px-4 pt-6"
     >
       <nav
-        className="mx-auto flex h-16 max-w-sm items-center justify-center rounded-full border border-white/10 bg-black/30 p-2 shadow-lg backdrop-blur-md"
+        className="mx-auto flex h-16 max-w-xs items-center justify-center rounded-full border border-white/10 bg-black/30 p-2 shadow-lg backdrop-blur-md sm:max-w-lg"
         role="navigation"
         aria-label="Menu principal"
       >
@@ -21,11 +21,13 @@ export default function Navigation() {
             <li key={item.name}>
               <Link
                 href={item.href}
-                className="flex flex-col items-center justify-center gap-1 text-center text-slate-300 transition-colors hover:text-white"
+                className="flex flex-col items-center justify-center gap-1 text-center text-slate-300 transition-colors hover:text-white sm:flex-row sm:gap-2"
                 aria-label={item.name}
               >
                 {item.icon}
-                <span className="text-xs font-medium">{item.name}</span>
+                <span className="hidden text-xs font-medium sm:block">
+                  {item.name}
+                </span>
               </Link>
             </li>
           ))}
