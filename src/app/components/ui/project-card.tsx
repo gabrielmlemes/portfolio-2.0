@@ -48,7 +48,6 @@ const ProjectCard = memo(function ProjectCard({ project }: ProjectCardProps) {
           alt={`Thumbnail do projeto ${project.name}`}
           width={800}
           height={600}
-          quality={100}
           className="aspect-[16/9] w-full bg-slate-100 dark:bg-slate-800 object-cover sm:aspect-[2/1] lg:aspect-[3/2] transition-all duration-300 group-hover:scale-105"
         />
         <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-slate-900/10 dark:ring-white/10"></div>
