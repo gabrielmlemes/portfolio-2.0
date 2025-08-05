@@ -6,7 +6,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import ScrollFloat from "./ui/scroll-text";
 
 const features = [
   {
@@ -33,21 +32,10 @@ export function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
-  // Variants for the main container to stagger children
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3, // Time between each card animation
-      },
-    },
-  };
-
   // Variants for individual cards
-  const cardVariants = {
+  const textVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
   return (
@@ -62,35 +50,35 @@ export function About() {
           <motion.h2
             ref={ref}
             id="about-heading"
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-2xl font-bold leading-7 text-blue-500 shadow-2xl"
           >
             Tecnologia & Inovação
           </motion.h2>
 
-          <ScrollFloat
-            animationDuration={1}
-            ease="back.inOut(2)"
-            scrollStart="center bottom+=50%"
-            scrollEnd="bottom bottom-=40%"
-            stagger={0.03}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-1 text-3xl font-bold tracking-tight text-white sm:text-4xl"
           >
             O que você encontra nos meus projetos
-          </ScrollFloat>
+          </motion.p>
         </div>
 
         <motion.dl
-          variants={containerVariants}
+          variants={textVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16"
         >
           {features.map((feature) => (
             <motion.div
               key={feature.name}
-              variants={cardVariants}
+              variants={textVariants}
               className="relative pl-16"
             >
               <dt className="text-base font-semibold leading-7 text-slate-900 dark:text-white">
@@ -112,4 +100,3 @@ export function About() {
     </section>
   );
 }
-

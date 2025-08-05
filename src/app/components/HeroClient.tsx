@@ -38,7 +38,7 @@ export function HeroClient() {
       animate="visible"
     >
       <motion.h1 variants={itemVariants}>
-        <AnimatedShinyText className="text-6xl font-bold tracking-tight text-transparent sm:text-7xl  drop-shadow-md">
+        <AnimatedShinyText className="text-6xl font-bold sm:text-7xl">
           Gabriel Lemes
         </AnimatedShinyText>
       </motion.h1>
@@ -95,4 +95,3 @@ export function HeroClient() {
     </motion.div>
   );
 }
-
