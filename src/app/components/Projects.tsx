@@ -50,7 +50,7 @@ export function Projects() {
       </div>
 
       {/* Featured Project Carousel */}
-      <div className="mx-auto mt-16 w-full max-w-6xl">
+      <div className="mx-auto mt-16 w-full max-w-6xl lg:px-8">
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}

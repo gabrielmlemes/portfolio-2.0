@@ -51,14 +51,6 @@ body {
   color: white; /* indigo-400 */
 }
 
-.projects-carousel .swiper-slide {
-  cursor: grab;
-}
-
-.projects-carousel .swiper-slide:active {
-  cursor: grabbing;
-}
-
 .projects-carousel .swiper-pagination-bullet {
   background: #a5b4fc; /* indigo-300 */
   opacity: 0.7;

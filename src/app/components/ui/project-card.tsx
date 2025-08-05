@@ -98,7 +98,7 @@ const ProjectCard = memo(function ProjectCard({ project }: ProjectCardProps) {
             <Link
               href={project.deployedUrl}
               target="_blank"
-              className="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center space-x-2 transition-colors"
+              className=" text-slate-300 hover:text-indigo-400 flex items-center space-x-2 transition-colors"
             >
               <FaExternalLinkAlt className="w-4 h-4 mr-2" />
               Visitar Projeto
@@ -106,7 +106,7 @@ const ProjectCard = memo(function ProjectCard({ project }: ProjectCardProps) {
             <Link
               href={project.githubUrl}
               target="_blank"
-              className="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center space-x-2 transition-colors"
+              className="text-slate-300 hover:text-indigo-400 flex items-center space-x-2 transition-colors"
             >
               <FaGithub className="w-4 h-4 mr-2" />
               Repositório
@@ -119,4 +119,3 @@ const ProjectCard = memo(function ProjectCard({ project }: ProjectCardProps) {
 });
 
 export default ProjectCard;
-
