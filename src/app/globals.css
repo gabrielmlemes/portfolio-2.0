@@ -18,7 +18,7 @@ body {
 }
 @theme inline {
   --animate-shiny-text: shiny-text 8s infinite;
-
+  --color-secondary: #e5e5e5;
   @keyframes shiny-text {
     0%,
     90%,
@@ -81,4 +81,3 @@ body {
   background: #6366f1; /* indigo-500 */
   opacity: 1;
 }
-

@@ -33,7 +33,7 @@ export function SocialLinks() {
                 href={social.href}
                 target="_blank"
                 aria-label={social.name}
-                className="text-neutral-400/70 transition-colors hover:text-slate-300"
+                className="text-secondary transition-all hover:text-slate-300 hover:scale-110 duration-150"
               >
                 {social.icon}
               </Link>

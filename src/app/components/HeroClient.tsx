@@ -1,11 +1,11 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, MotionProps } from "framer-motion";
 import Link from "next/link";
 import { SocialLinks } from "./ui/SocialLinks";
 import { HiOutlineArrowRight } from "react-icons/hi";
-import { AnimatedShinyText } from "./ui/shiny-text";
 import { HoverBorderGradient } from "./ui/button";
+import { TextAnimate } from "./ui/blur-text-animation";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,6 +29,17 @@ const itemVariants: Variants = {
   },
 };
 
+interface AnimatedItemProps extends MotionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const AnimatedItem = ({ children, className, ...props }: AnimatedItemProps) => (
+  <motion.div variants={itemVariants} className={className} {...props}>
+    {children}
+  </motion.div>
+);
+
 export function HeroClient() {
   return (
     <motion.div
@@ -37,17 +48,30 @@ export function HeroClient() {
       initial="hidden"
       animate="visible"
     >
-      <motion.h1 variants={itemVariants}>
-        <AnimatedShinyText className="text-6xl font-bold sm:text-7xl">
-          Gabriel Lemes
-        </AnimatedShinyText>
-      </motion.h1>
+      <TextAnimate
+        animation="blurIn"
+        as="h1"
+        duration={0.2}
+        once={true}
+        by="character"
+        className="text-6xl font-bold sm:text-7xl text-secondary"
+      >
+        Gabriel Lemes
+      </TextAnimate>
 
-      <motion.p className="max-w-2xl sm:text-lg lg:text-xl">
-        <AnimatedShinyText>Desenvolvedor Front-end</AnimatedShinyText>
-      </motion.p>
+      <TextAnimate
+        animation="blurIn"
+        as="p"
+        duration={0.2}
+        once={true}
+        by="character"
+        delay={0.2}
+        className="max-w-2xl sm:text-lg lg:text-xl text-secondary"
+      >
+        Software Developer
+      </TextAnimate>
 
-      <motion.div variants={itemVariants} className="flex justify-center">
+      <AnimatedItem className="flex justify-center">
         <Link href="#projetos">
           <HoverBorderGradient
             containerClassName="rounded-full"
@@ -58,14 +82,11 @@ export function HeroClient() {
             <HiOutlineArrowRight />
           </HoverBorderGradient>
         </Link>
-      </motion.div>
+      </AnimatedItem>
 
-      <motion.div
-        variants={itemVariants}
-        className="flex items-center justify-center"
-      >
+      <AnimatedItem className="flex items-center justify-center">
         <SocialLinks />
-      </motion.div>
+      </AnimatedItem>
     </motion.div>
   );
 }
