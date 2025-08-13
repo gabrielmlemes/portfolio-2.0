@@ -13,10 +13,10 @@ export function ProjectCardInfo({ name, description }: ProjectCardInfoProps) {
 
   return (
     <motion.div variants={textVariants}>
-      <h3 className="mt-3 text-lg font-semibold leading-6 text-slate-900 dark:text-white">
+      <h3 className="mt-3 text-lg font-semibold leading-6 text-secondary">
         {name}
       </h3>
-      <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+      <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-300">
         {description}
       </p>
     </motion.div>

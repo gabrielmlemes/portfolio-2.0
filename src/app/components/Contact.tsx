@@ -28,7 +28,7 @@ export function Contact() {
             animationDuration={1}
             pauseBetweenAnimations={0.7}
           />
-          <p className="text-base md:text-lg text-neutral-700 dark:text-neutral-200 mt-3">
+          <p className="text-base md:text-lg text-secondary mt-3">
             Estou sempre aberto a novas oportunidades e colaborações. Vamos
             trabalhar juntos?
           </p>

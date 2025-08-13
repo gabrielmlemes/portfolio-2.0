@@ -62,7 +62,7 @@ export function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-1 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            className="mt-1 text-3xl font-bold tracking-tight text-secondary sm:text-4xl"
           >
             O que você encontra nos meus projetos
           </motion.p>
@@ -81,16 +81,16 @@ export function About() {
               variants={textVariants}
               className="relative pl-16"
             >
-              <dt className="text-base font-semibold leading-7 text-slate-900 dark:text-white">
+              <dt className="text-base font-semibold leading-7 text-secondary">
                 <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
                   <feature.icon
                     className="h-6 w-6 text-white"
                     aria-hidden="true"
                   />
                 </div>
-                {feature.name}
+                <p className="text-lg">{feature.name}</p>
               </dt>
-              <dd className="mt-2 text-base leading-7 text-slate-600 dark:text-slate-400">
+              <dd className="mt-2 text-base leading-7 text-slate-300">
                 {feature.description}
               </dd>
             </motion.div>

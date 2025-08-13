@@ -76,7 +76,7 @@ export function HeroClient() {
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
-            className="dark:bg-black cursor-pointer bg-white text-black dark:text-slate-200 flex items-center justify-center gap-2"
+            className="bg-black cursor-pointer text-slate-200 flex items-center justify-center gap-2"
           >
             Ver Projetos
             <HiOutlineArrowRight />

@@ -6,7 +6,9 @@ interface ProjectCardTechIconsProps {
   technologies: Projects["technologies"];
 }
 
-export function ProjectCardTechIcons({ technologies }: ProjectCardTechIconsProps) {
+export function ProjectCardTechIcons({
+  technologies,
+}: ProjectCardTechIconsProps) {
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -20,7 +22,7 @@ export function ProjectCardTechIcons({ technologies }: ProjectCardTechIconsProps
       {technologies.map((tech) => (
         <span
           key={tech.name}
-          className="relative z-10 rounded-full bg-slate-100 dark:bg-slate-800 p-2 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+          className="relative z-10 rounded-full bg-slate-200  p-2 hover:bg-slate-500 transition-colors"
           title={tech.name}
         >
           {techIconsMap[tech.icon]}
@@ -29,3 +31,4 @@ export function ProjectCardTechIcons({ technologies }: ProjectCardTechIconsProps
     </motion.div>
   );
 }
+
