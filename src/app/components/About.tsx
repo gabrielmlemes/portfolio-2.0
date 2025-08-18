@@ -6,6 +6,12 @@ import {
 } from "@heroicons/react/24/outline";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const features = [
   {
@@ -96,7 +102,56 @@ export function About() {
             </motion.div>
           ))}
         </motion.dl>
+
+        <Accordion
+          type="single"
+          collapsible
+          defaultValue="item-1"
+          className="mt-28 w-2/3 mx-auto"
+        >
+          <AccordionItem value="item-1">
+            <AccordionTrigger>
+              Que tipo de projetos eu desenvolvo?
+            </AccordionTrigger>
+            <AccordionContent>
+              Desenvolvo aplicações web completas, desde landing pages e sites
+              institucionais até sistemas complexos e APIs REST. Meu foco é
+              criar soluções performáticas, escaláveis e com uma ótima
+              experiência de usuário.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>Quais tecnologias eu utilizo?</AccordionTrigger>
+            <AccordionContent>
+              Trabalho principalmente com o ecossistema JavaScript/TypeScript,
+              utilizando tecnologias como React.js, Next.js, Node.js, e bancos
+              de dados SQL e NoSQL. Estou sempre estudando e me atualizando com
+              as melhores práticas e ferramentas do mercado.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>Um pouco mais sobre mim?</AccordionTrigger>
+            <AccordionContent>
+              Sou desenvolvedor Fullstack com foco em Front-end e apaixonado por
+              tecnologia. Tenho experiência prática em projetos voluntários e
+              pessoais, aplicando tecnologias como React, Next.js, Node.js e
+              TypeScript, além de boas práticas de testes, versionamento de
+              código e metodologias ágeis. Minha trajetória inclui também uma
+              sólida bagagem no Exército Brasileiro, onde atuei como Gerente de
+              Sistemas. Nesse período, liderei equipes, automatizei processos e
+              otimizei fluxos de trabalho, o que resultou em ganhos de
+              eficiência e confiabilidade nos sistemas. Essa experiência
+              fortaleceu minha resiliência, disciplina e capacidade de
+              adaptação, qualidades que hoje aplico diretamente na área de
+              desenvolvimento de software. Acredito no aprendizado contínuo e na
+              colaboração como pilares para entregar soluções de impacto, unindo
+              organização, foco em resultados e visão estratégica com a prática
+              de desenvolvimento moderno.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </section>
   );
 }
+
