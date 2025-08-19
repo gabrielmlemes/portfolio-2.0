@@ -54,7 +54,7 @@ export function HeroClient() {
         duration={0.2}
         once={true}
         by="character"
-        className="text-6xl font-bold sm:text-7xl text-secondary"
+        className="text-4xl font-bold sm:text-7xl text-secondary"
       >
         Gabriel Lemes
       </TextAnimate>
