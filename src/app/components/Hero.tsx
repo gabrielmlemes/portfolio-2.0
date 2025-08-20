@@ -4,7 +4,10 @@ import { BackgroundBeams } from "./ui/background-beams";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-md">
+    <section
+      id="inicio"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-md"
+    >
       <div className="relative z-10 px-4">
         <HeroClient />
       </div>

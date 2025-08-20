@@ -19,7 +19,7 @@ export function Projects() {
   const featured = ProjectsList.slice(0, 3);
 
   return (
-    <section className="min-h-screen w-full py-30 px-4">
+    <section id="projetos" className="min-h-screen w-full py-30 px-4">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="flex items-center justify-center gap-2 text-2xl font-bold leading-7 text-white">
           Soluções
