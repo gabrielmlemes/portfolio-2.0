@@ -1,19 +1,14 @@
 "use client";
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { FiSend } from "react-icons/fi";
-import { z } from "zod";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import GlareHover from "./glare-hover";
-
-const contactFormSchema = z.object({
-  name: z.string().min(3, "O nome deve ter pelo menos 3 caracteres."),
-  email: z.string().email("Por favor, insira um email válido."),
-  message: z.string().min(5, "A mensagem deve ter pelo menos 5 caracteres."),
-});
-
-type ContactFormInputs = z.infer<typeof contactFormSchema>;
+import {
+  ContactFormInputs,
+  contactFormSchema,
+} from "@/schemas/contact-form-schema";
 
 export function ContactForm() {
   const {
