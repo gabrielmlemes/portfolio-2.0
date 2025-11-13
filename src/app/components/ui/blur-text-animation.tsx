@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/utils/tailwind-merge";
+import { cn } from "@/lib/tailwind-merge";
 import { AnimatePresence, motion, MotionProps, Variants } from "motion/react";
 import { ElementType, memo } from "react";
 

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 import { motion } from "motion/react";
-import { cn } from "@/utils/tailwind-merge";
+import { cn } from "@/lib/tailwind-merge";
 
 type Direction = "TOP" | "LEFT" | "BOTTOM" | "RIGHT";
 
@@ -97,4 +97,3 @@ export function HoverBorderGradient({
     </Tag>
   );
 }
-

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Accordion,
@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faqItems } from "@/utils/about-data";
+import { faqItems } from "@/constants/about-data";
 import { motion } from "framer-motion";
 
 export function FaqSection() {

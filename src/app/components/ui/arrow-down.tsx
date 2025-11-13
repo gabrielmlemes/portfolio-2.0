@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/utils/tailwind-merge";
+import { cn } from "@/lib/tailwind-merge";
 import { motion } from "framer-motion";
 
 export function ArrowDown({ className }: { className?: string }) {

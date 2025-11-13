@@ -1,6 +1,5 @@
 "use client";
 
-import { ProjectsList } from "@/types/projects";
 import ProjectCardComponent from "./ui/project-card";
 import RotatingText from "./ui/rotate-text";
 
@@ -14,6 +13,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Navigation, Pagination, A11y } from "swiper/modules";
+import { ProjectsList } from "@/constants/projects-list";
 
 export function Projects() {
   const featured = ProjectsList.slice(0, 3);

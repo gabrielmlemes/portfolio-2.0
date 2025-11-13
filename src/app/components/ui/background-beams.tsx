@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
-import { cn } from "@/utils/tailwind-merge";
+import { cn } from "@/lib/tailwind-merge";
 
 export const BackgroundBeams = React.memo(
   ({ className }: { className?: string }) => {

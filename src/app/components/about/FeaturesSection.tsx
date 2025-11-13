@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { features } from '@/utils/about-data';
+import { motion } from "framer-motion";
+import { features } from "@/constants/about-data";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -45,3 +45,4 @@ export function FeaturesSection() {
     </motion.dl>
   );
 }
+

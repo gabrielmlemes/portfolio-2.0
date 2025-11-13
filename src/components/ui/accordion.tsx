@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "lucide-react";
-import { cn } from "@/utils/tailwind-merge";
+import { cn } from "@/lib/tailwind-merge";
 
 function Accordion({
   ...props
@@ -65,4 +65,3 @@ function AccordionContent({
 }
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
-
