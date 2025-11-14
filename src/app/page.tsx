@@ -27,7 +27,7 @@ const Contact = dynamic(
 
 const Page = () => {
   return (
-    <>
+    <main className="flex flex-col">
       <Hero />
 
       <About />
@@ -35,7 +35,7 @@ const Page = () => {
       <Projects />
 
       <Contact />
-    </>
+    </main>
   );
 };
 

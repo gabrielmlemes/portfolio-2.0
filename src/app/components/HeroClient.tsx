@@ -5,7 +5,6 @@ import Link from "next/link";
 import { SocialLinks } from "./ui/SocialLinks";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import { HoverBorderGradient } from "./ui/button";
-import { TextAnimate } from "./ui/blur-text-animation";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,7 +22,7 @@ const itemVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 1.0,
       ease: "easeOut",
     },
   },
@@ -48,43 +47,32 @@ export function HeroClient() {
       initial="hidden"
       animate="visible"
     >
-      <TextAnimate
-        animation="blurIn"
-        as="h1"
-        duration={0.2}
-        once={true}
-        by="character"
-        className="text-4xl font-bold sm:text-7xl text-secondary"
-      >
-        Gabriel Lemes
-      </TextAnimate>
+      <AnimatedItem>
+        <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-transparent drop-shadow-sm sm:text-8xl">
+          Gabriel Lemes
+        </h1>
+      </AnimatedItem>
 
-      <TextAnimate
-        animation="blurIn"
-        as="p"
-        duration={0.2}
-        once={true}
-        by="character"
-        delay={0.2}
-        className="max-w-2xl sm:text-lg lg:text-xl text-secondary"
-      >
-        Software Developer
-      </TextAnimate>
+      <AnimatedItem>
+        <p className="max-w-2xl bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-transparent sm:text-lg lg:text-3xl">
+          Desenvolvedor de Software
+        </p>
+      </AnimatedItem>
 
       <AnimatedItem className="flex justify-center">
         <Link href="#projetos">
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
-            className="bg-black cursor-pointer text-slate-200 flex items-center justify-center gap-2"
+            className="flex cursor-pointer text-lg items-center justify-center gap-2 bg-black bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-transparent"
           >
-            Ver Projetos
-            <HiOutlineArrowRight />
+            Ver projetos
+            <HiOutlineArrowRight className="text-slate-400" />
           </HoverBorderGradient>
         </Link>
       </AnimatedItem>
 
-      <AnimatedItem className="flex items-center justify-center">
+      <AnimatedItem>
         <SocialLinks />
       </AnimatedItem>
     </motion.div>
