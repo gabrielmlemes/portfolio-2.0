@@ -4,7 +4,7 @@ import { useMotionValue, motion, useMotionTemplate } from "motion/react";
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { HiOutlineComputerDesktop } from "react-icons/hi2";
+import { FaLaptopCode } from "react-icons/fa";
 
 
 export const HeroHighlight = ({
@@ -165,7 +165,7 @@ export const Hero = () => {
         }}
         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-300 max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto flex flex-col"
       >
-        <Highlight className="text-white mb-5 text-5xl lg:text-6xl py-2">
+        <Highlight className="text-white mb-5 text-5xl lg:text-6xl py-4">
         Gabriel Lemes
         </Highlight>
         
@@ -182,10 +182,10 @@ export const Hero = () => {
         <div className="mt-8 flex items-center justify-center">
             <Button
                 asChild
-                className="text-lg lg:text-2xl py-6 w-full max-w-48 flex text-white items-center justify-center gap-2 bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400 hover:from-indigo-700 hover:via-blue-500 hover:to-cyan-700  duration-200 hover:scale-105 transition-all"
+                className="text-lg lg:text-2xl font-semibold py-6 w-full max-w-48 flex text-white items-center justify-center gap-2 bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 hover:from-indigo-700 hover:via-blue-500 hover:to-cyan-700  duration-200 hover:scale-105 transition-all"
             >
                 <Link href="#projetos" >
-                <HiOutlineComputerDesktop className={cn("size-5 lg:size-6")} />
+                <FaLaptopCode className={cn("size-5 lg:size-6")}/>
 
                     Projetos
                 </Link>
