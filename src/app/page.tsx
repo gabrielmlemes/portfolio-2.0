@@ -28,6 +28,7 @@ const Contact = dynamic(
 const Page = () => {
   return (
     <main className="flex flex-col">
+      {/* <LightRays /> */}
       <Hero />
 
       <About />

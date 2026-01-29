@@ -3,7 +3,6 @@
 @custom-variant dark (&:is(.dark *));
 
 html {
-  --background: #050505;
   --foreground: #ededed;
 }
 
@@ -112,7 +111,7 @@ body {
 
 :root {
   --radius: 0.625rem;
-  --background: #050505;
+  --background: #121215;
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);

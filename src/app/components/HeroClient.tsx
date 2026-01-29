@@ -4,7 +4,7 @@ import { motion, Variants, MotionProps } from "framer-motion";
 import Link from "next/link";
 import { SocialLinks } from "./ui/SocialLinks";
 import { HiOutlineArrowRight } from "react-icons/hi";
-import { HoverBorderGradient } from "./ui/button";
+import { HoverBorderGradient } from "./ui/hero-button";
 
 const containerVariants = {
   hidden: { opacity: 0 },

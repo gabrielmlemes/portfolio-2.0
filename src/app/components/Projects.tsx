@@ -1,31 +1,20 @@
 "use client";
 
-import ProjectCardComponent from "./ui/project-card";
 import RotatingText from "./ui/rotate-text";
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import { WobbleCardDone } from "@/app/components/projects/WobbleCardsDone";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// import required modules
-import { Navigation, Pagination, A11y } from "swiper/modules";
-import { ProjectsList } from "@/constants/projects-list";
-
 export function Projects() {
-  const featured = ProjectsList.slice(0, 3);
-
   return (
     <section id="projetos" className="min-h-screen w-full py-30 px-4">
-      <div className="mx-auto max-w-4xl text-center">
-        <h2 className="flex items-center justify-center gap-2 text-2xl font-bold leading-7 text-white">
+      <div className="mx-auto max-w-4xl text-center px-4">
+        <h2 className="flex items-center justify-center gap-2 text-2xl lg:text-5xl font-bold leading-7 text-white">
           Soluções
           <RotatingText
-            texts={["rápidas", "modernas", "criativas", "seguras"]}
-            mainClassName="px-2 sm:px-3 bg-blue-600 py-0.5 sm:py-1 md:py-2 rounded-lg text-2xl font-bold text-white"
+            texts={["modernas", "criativas", "completas"]}
+            mainClassName="px-2 sm:px-3 bg-blue-600 py-0.5 sm:py-1 md:py-2 rounded-lg text-2xl lg:text-5xl font-bold text-white"
             staggerFrom={"last"}
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
@@ -40,39 +29,16 @@ export function Projects() {
             rotationInterval={2000}
           />
         </h2>
-        <p className="mt-2 text-3xl font-bold tracking-tight text-secondary sm:text-4xl lg:text-5xl">
-          Projetos em Destaque
-        </p>
-        <p className="mt-6 text-lg leading-8 text-slate-300 dark:text-slate-300">
-          Uma seleção de projetos que demonstram minhas habilidades em criar
-          soluções robustas e com foco no usuário.
+        <p className="my-6 text-lg lg:text-xl leading-6 text-slate-300 dark:text-slate-300">
+          Uma seleção de projetos que demonstram minha capacidade de entregar aplicações reais, completas e de alta qualidade, sempre com foco no usuário e nas necessidades do negócio.
         </p>
       </div>
 
-      {/* Featured Project Carousel */}
-      <div className="mx-auto mt-16 w-full max-w-6xl lg:px-8">
-        <Swiper
-          modules={[Navigation, Pagination, A11y]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          breakpoints={{
-            // when window width is >= 1024px
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-          }}
-          className="projects-carousel !pb-12" // Add padding-bottom for pagination
-        >
-          {featured.map((project) => (
-            <SwiperSlide key={project.name}>
-              <ProjectCardComponent project={project} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <WobbleCardDone />
+
+      {/* <div className="flex items-center justify-center mt-14">
+        <Button size="lg" variant="outline">Ver mais projetos</Button>
+      </div> */}
     </section>
   );
 }
