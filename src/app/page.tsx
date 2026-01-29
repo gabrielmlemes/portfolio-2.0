@@ -1,8 +1,8 @@
-import { Hero } from "./components/Hero";
 import dynamic from "next/dynamic";
 import { AboutSkeleton } from "./components/ui/AboutSkeleton";
 import { ProjectsSkeleton } from "./components/ui/ProjectsSkeleton";
 import { ContactSkeleton } from "./components/ui/ContactSkeleton";
+import { Hero } from "./components/hero/Hero";
 
 const About = dynamic(
   () => import("./components/About").then((mod) => mod.About),
@@ -28,7 +28,6 @@ const Contact = dynamic(
 const Page = () => {
   return (
     <main className="flex flex-col">
-      {/* <LightRays /> */}
       <Hero />
 
       <About />
